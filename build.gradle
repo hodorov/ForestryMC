@@ -65,6 +65,10 @@ sourceSets {
 }
 
 repositories {
+    maven {
+        name = "central"
+        url = "https://repo1.maven.org/maven2/"
+    }
 	maven {
 		name = "ic2"
 		url = "http://maven.ic2.player.to/"
