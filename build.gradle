@@ -1,6 +1,10 @@
 buildscript {
 	repositories {
-		mavenCentral()
+//		mavenCentral()
+        maven {
+            name = "central"
+            url = "https://repo1.maven.org/maven2/"
+        }
 		maven {
 			name = "forge"
 			url = "http://files.minecraftforge.net/maven"
@@ -234,7 +238,7 @@ uploadArchives {
 		if (project.hasProperty('mavenDir')) {
 			mavenDeployer {
 				repository(url: "file://"+mavenDir)
-				
+
 				addFilter('api') { artifact, file ->
 					file == apiJar.archivePath
 				}
